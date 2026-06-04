@@ -17,8 +17,9 @@
     body {
       margin: 0;
       padding: 0;
-      background: url("") center center / cover no-repeat;
-      color: #edfafc;
+      background: url("");
+      background-color:#e6f9ff;
+      color: #e6f9ff;
     }
 
     main {
@@ -88,7 +89,7 @@
 
         stack3: {
           items: [
-          { kind: "html", html: "<div style='height:7vh'></div>" },  
+          { kind: "html", html: "<div style='height:12vh'></div>" },  
           {
               kind: "image",
               src: "./images/main2.webp",
@@ -118,7 +119,8 @@
               src: "./images/intro3elian.webp",
               alt: "Texto",
               variant: "wideText"   // 👈 ocupará ~70% del alto
-            }
+            },
+            { kind: "html", html: "<div style='height:2vh'></div>" },
           ]
         }
       },
