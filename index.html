@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bautizo Adolfito</title>
+  <title>Bautizo Elian</title>
   <link rel="icon" type="image/x-icon" href="./images/icon.png" />
   <style>
     :root {
@@ -17,8 +17,8 @@
     body {
       margin: 0;
       padding: 0;
-      background: url("./images/background.webp") center center / cover no-repeat;
-      color: #fff;
+      background: url("") center center / cover no-repeat;
+      color: #edfafc;
     }
 
     main {
@@ -46,7 +46,7 @@
     const app = document.getElementById('app');
 
     const guestModal = initGuestModal({
-      scriptURL: 'listadeinvitadossofi',
+      scriptURL: 'listadeinvitadoselian',
       title: 'Lista de invitados',
       description: 'Déjanos tu nombre, cuántas personas vienen y un mensaje opcional.',
       decorTopCenterSrc: './images/flowerstopcenter.webp',
@@ -67,7 +67,7 @@
     // });
     // app.prepend(topHero);
     const player = initAudioPlayer({
-      src: './images/adolfito.mp3',
+      src: './images/elian.mp3',
       width: 'calc(var(--device-w, 430px) * 0.30)',
       top: 15,
       safeTopPx: 15,
@@ -82,7 +82,7 @@
       {
         background: '',
 
-        topCenter: './images/ballonscentertop.webp',
+        topCenter: './images/ballonscentertopcowboy.webp',
         leftCenter:'./images/ballonscenterleft.webp',
         rightCenter:'./images/ballonscenteright.webp',
 
@@ -103,7 +103,19 @@
             },
             {
               kind: "image",
-              src: "./images/intro.webp",
+              src: "./images/intro1elian.webp",
+              alt: "Texto",
+              variant: "wideText"   // 👈 ocupará ~70% del alto
+            },
+            {
+              kind: "image",
+              src: "./images/intro2elian.webp",
+              alt: "Texto",
+              variant: "wideText"   // 👈 ocupará ~70% del alto
+            },
+            {
+              kind: "image",
+              src: "./images/intro3elian.webp",
               alt: "Texto",
               variant: "wideText"   // 👈 ocupará ~70% del alto
             }
@@ -156,7 +168,7 @@
               src: "./images/mapbutton2.webp",
               alt: "Iglesia",
               variant: "wideText",
-              onClick: () => window.open('https://maps.app.goo.gl/Ee4zNsbWSFNMqQL38', '_blank')
+              onClick: () => window.open('https://maps.app.goo.gl/fqZFtbhadpBhGX5Z9', '_blank')
             }
           ]
         }
@@ -183,7 +195,7 @@
               src: "./images/mapbutton2.webp",
               alt: "Iglesia",
               variant: "wideText",
-              onClick: () => window.open('https://maps.app.goo.gl/mBR7Jz2SZDgZwYuh7', '_blank')
+              onClick: () => window.open('https://maps.app.goo.gl/GZYgFgQefJKKkSxa6', '_blank')
             }
           ]
         }
@@ -210,17 +222,37 @@
               src: "./images/confirmbutton2.webp",
               alt: "Salón",
               variant: "wideText",
-              onClick: () => pass //guestModal.open()
+              onClick: () => guestModal.open()
             }
           ]
         }
       }
       ,
+
+      {
+        background: '',                         // sin fondo
+        rightCenter: '', // decorativo lateral
+        leftCenter: '',
+
+        stack3: {
+          gap: "10px",
+          items: [
+            // {
+            //   kind: "image",
+            //   src: "./images/main.webp",
+            //   alt: "Imagen principal",
+            //   variant: "principal"   // 👈 ocupará ~70% del alto
+            // },
+            { kind: "image", src: "./images/dresscode3.webp", alt: "Cuadrada", variant: "square" }
+
+          ]
+        }
+      },
       
       {
         // sin fondo ni parallax; dejamos las decoraciones absolutas
         // background: './images/bottombackground.webp',
-        bottomCenter: './images/bottombackground.webp',
+        bottomCenter: './images/bottombackgroundcowboy.webp',
         // topLeft: './images/butterflielefttop.webp',
         // topRight: './images/butterflielefttop2.webp',
 
@@ -228,19 +260,19 @@
           gap: "16px",               // un poco más de aire en el bloque final
           items: [
             
-            {
-              kind: "node",
-              node: registry.countdown({
-                target: '2026-04-25T16:00:00-06:00',
-                bgSrc: './images/counter.webp',
-                //digitsPath: d => `./digits/${d}.png`,
-                zeroPad: { days: 2, hours: 2, minutes: 2, seconds: 2 },
-                showLabels: true,
-                // clave: atarlo a tu "device width"
-                scaleWidth: 'min(80vw, calc(var(--device-w, 430px) * 0.90))',
+            // {
+            //   kind: "node",
+            //   node: registry.countdown({
+            //     target: '2026-06-13T13:00:00-06:00',
+            //     bgSrc: './images/counter.webp',
+            //     //digitsPath: d => `./digits/${d}.png`,
+            //     zeroPad: { days: 2, hours: 2, minutes: 2, seconds: 2 },
+            //     showLabels: true,
+            //     // clave: atarlo a tu "device width"
+            //     scaleWidth: 'min(80vw, calc(var(--device-w, 430px) * 0.90))',
                 
-              })
-            },
+            //   })
+            // },
             { kind: "html", html: "<div style='height:10vh'></div>" },
           ]
         },
